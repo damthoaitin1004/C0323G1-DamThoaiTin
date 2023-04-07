@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung Dung May Tinh</title>
+</head>
+<body>
+<form action="/student" method="get">
+    <h3>Caculator</h3><br>
+    <label><input id="number1" type="number"></label>
+    <label><input id="number2" type="number"></label><br>
+    <button  type="button" onclick="hitNumber()">Addition(+)</button>
+    <button  type="button" onclick="nameNumber()">Subtraction(-)</button>
+    <button  type="button" onclick="getNumber()">Multiplication(x)</button>
+    <button  type="button" onclick="showNumber()">Division(/)</button><br>
+    <div>Result</div>
+    <div id="result"></div>
+
+</form>
+
+</body>
+<script>
+    function hitNumber(){
+        let x = +document.getElementById('number1').value;
+        let y = +document.getElementById('number2').value;
+        let z = x + y;
+        document.getElementById('result').innerText = z;
+    }
+    function nameNumber(){
+        let x = +document.getElementById('number1').value;
+        let y = +document.getElementById('number2').value;
+        let z = x - y;
+        document.getElementById('result').innerText = z;
+    }
+    function getNumber(){
+        let x = +document.getElementById('number1').value;
+        let y = +document.getElementById('number2').value;
+        let z = x * y;
+        document.getElementById('result').innerText = z;
+    }
+    function showNumber(){
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let z = a / b;
+        document.getElementById('result').innerText = z;
+    }
+
+</script>
+</html>

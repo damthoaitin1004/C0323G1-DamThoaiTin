@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<tr>
+    <th>Amount</th>
+    <th>From Currency</th>
+    <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="number1"></td>
+        <td> <select id="number2">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+
+        </select></td>
+        <td> <select id="number3">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select></td>
+        <td><button onclick="lastnumber()" >Convert</button></td>
+    </tr>
+</table>
+<div id="result"></div>
+<script>
+    function lastnumber() {
+        let x = document.getElementById("number1").value;
+        let y = document.getElementById("number2").value;
+        let z = document.getElementById("number3").value;
+        let result;
+        if (y == "VND" && z == "USD") {
+            result = "Result: " + (x / 23000) + "$";
+        } else if (y == "VND" && z == "VND") {
+            result = "Result: " + x + "VNĐ";
+        } else if (y == "USD" && z == "USD") {
+            result = "Result: " + x * 1 + "$";
+        } else if (y == "USD" && z == "VND") {
+            result = "Result: " + (x * 23000) + "VNĐ";
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
