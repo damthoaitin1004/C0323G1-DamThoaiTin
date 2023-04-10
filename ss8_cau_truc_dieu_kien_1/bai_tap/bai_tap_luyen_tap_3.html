@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XAC DINH SO NGUYEN DUONG HAY NGUYEN AM</title>
+</head>
+<body>
+<h3>Kiểm tra số nguyên âm hay nguyên dương</h3>
+<LABEL><input type="number" id="numberone" placeholder="Vui lòng nhập 1 số"></LABEL><br>
+<br><button onclick="showa()">Check</button>
+<div id="numbertwo">Đợi kết quả ở đây</div>
+<script>
+    function showa(){
+       let x = +document.getElementById("numberone").value;
+       if (x > 0 && x % 1 == 0){
+           document.getElementById("numbertwo").innerHTML="Đây là một số nguyên dương";}
+       else if (x % 1 !== 0){document.getElementById("numbertwo").innerHTML="Đây không phải là một số nguyên";}
+       else {document.getElementById("numbertwo").innerHTML="Đây là một số nguyên âm";}
+
+    }
+
+</script>
+
+
+
+</body>
+</html>

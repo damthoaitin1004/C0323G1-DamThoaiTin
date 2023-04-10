@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>TÍNH CHỈ SỐ CÂN NẶNG</h1><br><br>
+<label>Vui lòng nhập chỉ số cân nặng: kg <input type="number" id="weight"></label>
+<br>
+<br>
+
+<label>Vui lòng nhập chỉ số chiều cao: m <input type="number" id="hight"></label>
+<br><br><button type="button" onclick="coinnumber()">Xin mời kiểm tra</button>
+<div id="hi2"></div> <div id="hi"></div>
+<script>
+    function coinnumber(){
+        let x = +document.getElementById("weight").value;
+let y = +document.getElementById("hight") .value;
+let z = x/(y^2);
+ document.getElementById("hi2").innerHTML = "Chỉ số BMI của bạn là " + z;
+    if (z < 18)
+        document.getElementById("hi").innerHTML = "<p>Bạn hơi gầy đề nghị tăng cân cấp tốc</p> <img src='https://i.pinimg.com/564x/f1/76/64/f17664023cacb7896c9c2c9eb2c62eaf.jpg' alt='gay' style='height: 100%'>" ;
+    else if (z < 25.0)
+    document.getElementById("hi").innerHTML ="<p>Thân hình oke khuyến khích nên đi thi hoa hậu </p> <img src='https://cuoixastress.com/wp-content/uploads/2022/08/C399-uC3B4i-kinh-nhE1BB9D.jpg' alt='good' style='height: 50%'> ";
+
+    else if (z < 30)
+        document.getElementById("hi").innerHTML ="<p>Bạn hơi mập ráng nhìn thì cũng thấy tạm ổn</p> <img src='https://i.pinimg.com/564x/b4/8e/f9/b48ef93d268351e4b2182f7382e8caf9.jpg' alt='ngon' style='height: 50%'> ";
+
+    else
+        document.getElementById("hi").innerHTML ="<p>Cảnh báo bạn quá béo đề nghị nên chăm chỉ tập luyện thể thao để giảm cân</p><img src='https://i.pinimg.com/564x/52/e9/27/52e92753c29ea7212a786b267c46d3d8.jpg' alt='che' style='height: 30%'> ";}
+</script>
 </body>
 </html>
