@@ -22,24 +22,24 @@
             <option value="USD">USD</option>
             <option value="VND">VND</option>
         </select></td>
-        <td><button onclick="lastnumber()" >Convert</button></td>
+        <td><button onclick="tinhtien()" >Convert</button></td>
     </tr>
 </table>
 <div id="result"></div>
 <script>
-    function lastnumber() {
-        let x = document.getElementById("number1").value;
-        let y = document.getElementById("number2").value;
-        let z = document.getElementById("number3").value;
+    function tinhtien() {
+        let tien = document.getElementById("number1").value;
+        let usd = document.getElementById("number2").value;
+        let vnd = document.getElementById("number3").value;
         let result;
-        if (y == "VND" && z == "USD") {
-            result = "Result: " + (x / 23000) + "$";
-        } else if (y == "VND" && z == "VND") {
-            result = "Result: " + x + "VNĐ";
-        } else if (y == "USD" && z == "USD") {
-            result = "Result: " + x * 1 + "$";
-        } else if (y == "USD" && z == "VND") {
-            result = "Result: " + (x * 23000) + "VNĐ";
+        if (usd == "VND" && vnd == "USD") {
+            result = "Result: " + (tien / 23000) + "$";
+        } else if (usd == "VND" && usd == "VND") {
+            result = "Result: " + tien + "VNĐ";
+        } else if (vnd == "USD" && vnd == "USD") {
+            result = "Result: " + tien  + "$";
+        } else if (usd == "USD" && vnd == "VND") {
+            result = "Result: " + (tien * 23000) + "VNĐ";
         }
         document.getElementById("result").innerHTML = result;
     }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 1</title>
+</head>
+<body>
+<h3>TÍNH ĐIỂM TRUNG BÌNH VÀ TỔNG CỦA MỘT SINH VIÊN</h3>
+<br>
+<p>Điểm Lý <label><input name="Ly" type="number" id="number1"></label></p>
+<p>Điểm Hóa <label><input name="Hoa" type="number" id="number2"></label></p>
+<p>Điểm Sinh <label><input name="Sinh" type="number" id="number3"></label></p>
+<div id="Sum"></div>
+<button type="button"  onclick="tinhtong()">TỔNG 3 MÔN</button>
+
+<script>
+    function tinhtong() {
+        let diemly = +document.getElementById("number1").value;
+        let diemHoa = +document.getElementById("number2").value;
+        let diemSinh = +document.getElementById("number3").value;
+        let diemtong = diemly + diemHoa + diemSinh;
+        document.getElementById("Sum").innerHTML = +diemtong;
+
+
+    }</script>
+
+
+    <div id="TB"></div><br>
+<button type="button"  onclick="tinhtbcong()">TB 3 MÔN</button>
+<script>
+    function tinhtbcong() {
+        let diemly = +document.getElementById("number1").value;
+        let diemHoa = +document.getElementById("number2").value;
+        let diemSinh = +document.getElementById("number3").value;
+        let diemtrungbinh = (diemly + diemHoa + diemSinh)/3
+            document.getElementById("TB").innerHTML= +diemtrungbinh;
+    }
+
+
+</script>
+<br> <h3>Chương trình tính chu vi hình tròn</h3>
+
+<p>Bán kính hình tròn <label><input name="Lyi" type="number" id="number4"></label></p>
+<div id="Sun"></div>
+<button type="button"  onclick="tinhchuvi()">Diện tích </button><br><br>
+
+<button type="button"  onclick="tinhdientich()">Chu vi </button>
+<div id="Sunn"></div>
+<script>
+    function tinhchuvi() {
+       let bankinh = +document.getElementById("number4").value;
+       let Pi = 3.14;
+      let  tinhchuvi = bankinh * 2 * Pi;
+        document.getElementById("Sun").innerHTML = +tinhchuvi;
+
+
+    }
+    function tinhdientich(){
+        let bankinh = +document.getElementById("number4")
+        let Pi = 3.14;
+        let tinhdientich = bankinh ^ 2 *Pi;
+        document.getElementById("Sunn").innerHTML = +tinhdientich;
+    }
+
+</script>
+</body>
+</html>

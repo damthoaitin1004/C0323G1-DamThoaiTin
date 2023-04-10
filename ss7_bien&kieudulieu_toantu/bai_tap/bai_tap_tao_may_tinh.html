@@ -9,10 +9,10 @@
     <h3>Caculator</h3><br>
     <label><input id="number1" type="number"></label>
     <label><input id="number2" type="number"></label><br>
-    <button  type="button" onclick="hitNumber()">Addition(+)</button>
-    <button  type="button" onclick="nameNumber()">Subtraction(-)</button>
-    <button  type="button" onclick="getNumber()">Multiplication(x)</button>
-    <button  type="button" onclick="showNumber()">Division(/)</button><br>
+    <button  type="button" onclick="phepcong()">Addition(+)</button>
+    <button  type="button" onclick="pheptru()">Subtraction(-)</button>
+    <button  type="button" onclick="phepnhan()">Multiplication(x)</button>
+    <button  type="button" onclick="phepchia()">Division(/)</button><br>
     <div>Result Division</div>
     <div id="result"></div>
 
@@ -20,29 +20,29 @@
 
 </body>
 <script>
-    function hitNumber(){
-        let x = +document.getElementById('number1').value;
-        let y = +document.getElementById('number2').value;
-        let z = x + y;
-        document.getElementById('result').innerText = +z;
+    function phepcong(){
+        let sodautien = +document.getElementById('number1').value;
+        let sothuhai = +document.getElementById('number2').value;
+        let phepcong = sodautien + sothuhai;
+        document.getElementById('result').innerText = +phepcong;
     }
-    function nameNumber(){
-        let x = +document.getElementById('number1').value;
-        let y = +document.getElementById('number2').value;
-        let z = x - y;
-        document.getElementById('result').innerText = +z;
+    function pheptru(){
+        let sodautien = +document.getElementById('number1').value;
+        let sothuhai = +document.getElementById('number2').value;
+        let pheptru = sodautien - sothuhai;
+        document.getElementById('result').innerText = +pheptru;
     }
-    function getNumber(){
-        let x = +document.getElementById('number1').value;
-        let y = +document.getElementById('number2').value;
-        let z = x * y;
-        document.getElementById('result').innerText = +z;
+    function phepnhan(){
+        let sodautien = +document.getElementById('number1').value;
+        let sothuhai = +document.getElementById('number2').value;
+        let phepnhan = sodautien * sothuhai;
+        document.getElementById('result').innerText = +phepnhan;
     }
-    function showNumber(){
-        let a = +document.getElementById('number1').value;
-        let b = +document.getElementById('number2').value;
-        let z = a / b;
-        document.getElementById('result').innerText = +z;
+    function phepchia(){
+        let sodautien = +document.getElementById('number1').value;
+        let sothuhai = +document.getElementById('number2').value;
+        let phepchia = sodautien / sothuhai;
+        document.getElementById('result').innerText = +phepchia;
     }
 
 </script>
