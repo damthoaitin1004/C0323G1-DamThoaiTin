@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so nguyen co gia tri lon nhat</title>
+</head>
+<body>
+<h3>Cho 3 số nguyên dương tìm giá trị lớn nhất trong 3 số nguyên dương nhập vào</h3>
+<label><input type="number" id="Numbera" placeholder="vui lòng nhập số"></label>
+<label><input type="number" id="Numberb" placeholder="vui lòng nhập số"></label>
+<label><input type="number" id="Numberc" placeholder="vui lòng nhập số"></label>
+<br><br>
+<button onclick="findNumber()">Check</button>
+<br>
+<div id="result">Đợi kết quả ở đây</div>
+<script>
+    function findNumber() {
+        let numbera = +document.getElementById("Numbera").value;
+        let numberb = +document.getElementById("Numberb").value;
+        let numberc = +document.getElementById("Numberc").value;
+        if ((numbera % 1 !== 0) || (numberb % 1 !== 0) || (numberc % 1 !== 0)) {
+            document.getElementById("result").innerHTML = "Chỉ thực thi khi 3 số là số nguyên"
+        } else if ((numberb < numbera) && (numbera > numberc)) {
+            document.getElementById("result").innerHTML = "Giá trị lớn nhất là " + numbera;
+        } else if (numberb > numberc) {
+            document.getElementById("result").innerHTML = "Giá trị lớn nhất là " + numberb;
+        } else {
+            document.getElementById("result").innerHTML = "Giá trị lớn nhất là " + numberc;
+        }
+    }
+</script>
+</body>
+</html>

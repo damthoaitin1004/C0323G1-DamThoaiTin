@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH TIEN HOA HONG</title>
+</head>
+<body>
+<label><input type="number" id="thuNhap()" placeholder="Nhập thu nhập tháng này"></label>
+<button id="hoaHong" onclick="tinhTien()">Check</button>
+<div id="result"></div>
+<script>
+    function tinhTien() {
+        let thuNhap = +document.getElementById("thuNhap()").value;
+        if (thuNhap < 6000000) {
+            let hoaHong = thuNhap * 6 / 100;
+            document.getElementById("result").innerHTML = "Vậy số tiền hoa hồng bạn nhận được là " + hoaHong;
+        } else if (thuNhap < 8000000) {
+            let hoaHong = thuNhap * 8 / 100;
+            document.getElementById("result").innerHTML = "Vậy số tiền hoa hồng nhận được là " + hoaHong;
+        } else {
+            let hoaHong = thuNhap * 10 / 100;
+            document.getElementById("result").innerHTML = "Vậy số tiền hoa hồng nhận được là " + hoaHong;
+        }
+
+    }
+
+</script>
+</body>
+</html>

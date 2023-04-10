@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuoi du dieu kien vao lop 10</title>
+</head>
+<body>
+<label><input type="number" id="old" placeholder="vui lòng nhập số tuổi"></label>
+<button type="button" onclick="kiemTra()">Check</button>
+<div id="result"></div>
+<script>
+    function kiemTra(){
+        let old = +document.getElementById("old").value;
+        if (old >= 15){
+            document.getElementById("result").innerHTML= "Bạn đã đủ tuổi để học lớp 10";}
+
+        else {document.getElementById("result").innerHTML= "Bạn đã chưa đủ tuổi để học lớp 10";}
+    }
+</script>
+</body>
+</html>
