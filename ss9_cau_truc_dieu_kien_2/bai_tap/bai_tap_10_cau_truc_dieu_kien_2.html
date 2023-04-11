@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH TIEN DIEN</title>
+</head>
+<body>
+<H2>TÍNH TIỀN ĐIỆN</H2>
+
+
+<p>cho giá điện 2,536 đồng để trả cho 1 kW</p>
+
+<label>Công suất tiêu thụ <input type="number" id="congSuat" placeholder="kW"></label>
+<button onclick="tinhTien()">Thành tiền</button>
+<div id="result"></div>
+<script>
+    function tinhTien() {
+        let congSuat = +document.getElementById("congSuat").value;
+        let tienDien = congSuat * 2.536;
+        document.getElementById("result").innerHTML = "Số tiền điện bạn phải thanh toán là" + tienDien + "VNĐ";
+    }
+</script>
+</body>
+</html>

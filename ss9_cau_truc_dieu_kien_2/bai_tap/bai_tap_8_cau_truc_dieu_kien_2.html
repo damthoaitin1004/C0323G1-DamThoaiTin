@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIEM TRA TUOI CUA 1 NGUOI</title>
+</head>
+<body>
+<label><input type="number" id="number"></label>
+<br><br>
+<button onclick="checkNumber()">Check</button>
+<div id="result"></div>
+<script>
+    function checkNumber() {
+        let age = +document.getElementById("number").value;
+        if ((age % 1 == 0) && (age > 0) && (age <= 120)) {
+            document.getElementById("result").innerHTML = +age + " Là số tuổi của một người";
+
+        } else {
+            document.getElementById("result").innerHTML = +age + " Không phải là số tuổi của một người";
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH DIEN TICH HINH CHU NHAT</title>
+</head>
+<body>
+<h1> Tính diện tích hình chữ nhật</h1>
+<label><input type="number" id="chieuDai" placeholder="Nhập chiều dài"></label>
+<label><input type="number" id="chieuRong" placeholder="Nhập chiều rộng"></label>
+<br><br>
+<button onclick="dienTich()">Diện tích</button>
+<div id="result">Kết quả sẽ hiển thị ở đây</div>
+<script>
+    function dienTich() {
+        let chieuDai = +document.getElementById("chieuDai").value;
+        let chieuRong = +document.getElementById("chieuRong").value;
+        let dienTich = chieuDai * chieuRong;
+        document.getElementById("result").innerHTML = "Diện tích là " + dienTich;
+
+    }
+</script>
+
+</body>
+</html>

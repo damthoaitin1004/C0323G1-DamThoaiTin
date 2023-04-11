@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHUONG TRINH BAC 2</title>
+</head>
+<body>
+<h2>Giải phương trình bậc 2</h2>
+<br>
+<h3>ax<sup>2</sup>+bx+c=0</h3>
+<p> Với 3 số a,b,c nhập vào. Tìm X</p><br>
+<label><input type="number" placeholder="Nhập số a" id="soA"></label>
+<label><input type="number" placeholder="Nhập số b" id="soB"></label>
+<label><input type="number" placeholder="Nhập số c" id="soC"></label>
+<br><br>
+<button onclick="timX()">Tìm X</button>
+<div id="result"></div>
+<script>
+    function timX() {
+        let numberA = +document.getElementById("soA").value;
+        let numberB = +document.getElementById("soB").value;
+        let numberC = +document.getElementById("soC").value;
+        let delta = (numberB * numberB) - (4 * numberA * numberC);
+        let numberX = ((-numberB) / (2 * numberA));
+        let numberXa = ((-numberB) + Math.sqrt(delta)) / (2 * numberA);
+        let numberXb = ((-numberB) - Math.sqrt(delta)) / (2 * numberA);
+        if (delta < 0) {
+            document.getElementById("result").innerHTML = "Phương trình vô nghiệm";
+        } else if (delta === 0) {
+            document.getElementById("result").innerHTML = "Phương trình có nghiệm kép là " + numberX;
+        } else {
+            document.getElementById("result").innerHTML = "Phương trình có 2 nghiệm phân biệt " + numberXa + "và" + numberXb;
+
+        }
+    }
+</script>
+</body>
+</html>

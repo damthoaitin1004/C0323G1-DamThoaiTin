@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH DIEN TICH HINH VUONG</title>
+</head>
+<body>
+<h1>Tính diện tích hình vuông</h1>
+<label><input type="number" id="canhhinhvuong" placeholder="nhập chiều dài"></label>
+<br><br>
+<button onclick="dienTich()">Diện tích</button>
+<br>
+<div id="result"></div>
+<script>
+    function dienTich() {
+        let chieuDai = +document.getElementById("canhhinhvuong").value;
+        let dienTich = chieuDai * chieuDai;
+        document.getElementById("result").innerHTML = "Diện tích hình vuông là" + dienTich;
+    }
+</script>
+</body>
+</html>

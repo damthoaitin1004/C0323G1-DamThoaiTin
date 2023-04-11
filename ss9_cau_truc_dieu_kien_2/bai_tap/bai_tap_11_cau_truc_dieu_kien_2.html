@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH THUE THU NHAP CA NHAN</title>
+</head>
+<body>
+<h1>Thuế thu nhập cá nhân</h1><br>
+<label>Vui lòng nhập thu nhập cá nhân <input type="number" id="tienluong" placeholder="VNĐ"></label>
+<button onclick="tinhTien()">Thu nhập sau khi tính thuế</button>
+<div id="result"></div>
+<script>
+    function tinhTien() {
+        let thuNhap = +document.getElementById("tienluong").value;
+        if (thuNhap <= 5000000) {
+            document.getElementById("result").innerHTML = "Số tiền thuế phải trả là " + (thuNhap * (5 / 100)) + "VNĐ";
+        } else if (thuNhap <= 10000000) {
+            document.getElementById("result").innerHTML = "Số tiền thuế phải trả là " + ((thuNhap * (10 / 100)) - 250000) + "VNĐ";
+        } else if (thuNhap <= 20000000) {
+            document.getElementById("result").innerHTML = "Số tiền phải trả là " + (thuNhap * (15 / 100)) + "VNĐ";
+        } else {
+            document.getElementById("result").innerHTML = "Số tiền phải trả " + ((thuNhap * (30 / 100)) - 3250000) + "VNĐ";
+        }
+    }
+</script>
+</body>
+</html>

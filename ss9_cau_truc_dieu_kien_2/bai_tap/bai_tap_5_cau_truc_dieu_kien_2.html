@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH DIEN TICH TAM GIAC VUONG</title>
+</head>
+<body>
+<h1>Tính diện tích tam giác vuông</h1>
+<label><input type="number" id="chieuCao" placeholder="Chiều cao"></label>
+<label><input type="number" id="chieuDaiday" placeholder="Chiều dài cạnh đáy"></label><br><br>
+<button onclick="dienTich()">Diện tích</button>
+<br>
+<div id="result"></div>
+<br>
+<script>
+    function dienTich() {
+        let chieuDai = +document.getElementById("chieuCao").value;
+        let chieuDaiday = +document.getElementById("chieuDaiday").value;
+        let dienTich = (chieuDai * chieuDaiday) / 2;
+        document.getElementById("result").innerHTML = "Diện tích của tam giác là " + dienTich;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH LAI NGAN HANG</title>
+</head>
+<body>
+<h1>Tính lãi suất ngân hàng </h1>
+<label>Nhập số tiền ban đầu <input type="number" id="sotienbandau" placeholder="VNĐ"></label><br><br>
+<label>Nhập số tháng cho vay <input type="number" id="thangvay"></label><br><br>
+<label>Nhập số lãi suất hàng tháng <input type="number" id="laisuat" placeholder="%"></label><br><br>
+<button onclick="checkMoney()">Tính lãi suất</button>
+<div id="result"></div>
+<script>
+    function checkMoney() {
+        let putMoney = +document.getElementById("sotienbandau").value;
+        let month = +document.getElementById("thangvay").value;
+        let rateMonth = +document.getElementById("laisuat").value;
+        let money = putMoney * Math.pow((1 + (rateMonth / 100)), month) - putMoney;
+        document.getElementById("result").innerHTML = "Số tiền sau khi tính lãi là" + money;
+    }
+
+</script>
+</body>
+</html>
