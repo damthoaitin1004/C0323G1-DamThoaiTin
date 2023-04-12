@@ -10,11 +10,11 @@
 <table>
     <script>
 
-        for (let i = 1; i <= 9; i++) {
+        for (let td = 1; td <= 9; td++) {
             document.write("<tr>")
-            for (let j = 2; j <= 9; j++) {
+            for (let tr = 2; tr <= 9; tr++) {
                 document.write("<td style='border: 1px solid gray'>")
-                document.write(j + "x" + i + "=" + (i * j));
+                document.write(tr + "x" + td + "=" + (td * tr));
                 document.write("</td>")
             }
             document.write("</tr>");
