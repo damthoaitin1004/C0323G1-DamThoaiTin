@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HIEN THI 20 SO NGUYEN TO DAU TIEN</title>
+</head>
+<body>
+<h1>Hiển thị 20 số nguyên tố đầu tiên</h1>
+<script>
+    let n = +prompt("Nhập số lượng SN")
+    let count = 0;
+    let j = 2
+    while (count < n) {
+        let count2 = 0;
+        for (let i = 1; i < j; i++) {
+            if (j % i === 0) {
+                count2++
+            }
+        }
+        if (count2 === 1) {
+            document.write(j + ",");
+            count++;
+        }
+        j++;
+    }
+
+</script>
+</body>
+</html>
