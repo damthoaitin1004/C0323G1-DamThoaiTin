@@ -18,15 +18,15 @@
         let diemCuoiki = +document.getElementById("diemcuoiki").value;
         let diemTrungbinh = (diemKiemtra + diemGiuaki * 2 + diemCuoiki * 3) / 6
         if (diemTrungbinh > 10) {
-            document.getElementById("result").innerHTML = "Chỉ xếp loại trên thang điểm 1 đến 10"
+            document.getElementById("result").innerHTML = "Chỉ xếp loại trên thang điểm 1 đến 10";
         } else if (diemTrungbinh > 8) {
             document.getElementById("result").innerHTML = "Xếp loại Giỏi";
         } else if (diemTrungbinh >= 6) {
             document.getElementById("result").innerHTML = "Xếp loại học sinh Khá ";
         } else if (diemTrungbinh >= 4) {
-            document.getElementById("result").innerHTML = "Xếp loại học sinh Trung bình"
+            document.getElementById("result").innerHTML = "Xếp loại học sinh Trung bình";
         } else {
-            document.getElementById("result").innerHTML = "Học giỏi quá khuyên bạn nên đi phục vụ quân đội"
+            document.getElementById("result").innerHTML = "Học giỏi quá khuyên bạn nên đi phục vụ quân đội";
         }
 
     }
