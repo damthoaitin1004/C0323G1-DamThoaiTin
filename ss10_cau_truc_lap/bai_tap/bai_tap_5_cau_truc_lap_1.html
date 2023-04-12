@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let i = 0;
-    let j = 1;
+    let nOne = 0;
+    let nTwo = 1;
     let fibonacci;
     let sum = 0;
     for (let count = 0; count < 20; count++) {
-        fibonacci = i + j;
-        i = j;
-        j = fibonacci;
+        fibonacci = nOne + nTwo;
+        nOne = nTwo;
+        nTwo = fibonacci;
         sum += fibonacci;
 
     } document.write(sum + "<br/>");

@@ -9,19 +9,19 @@
 <script>
 
     let count = 0;
-    let j = 2
+    let number = 2
     while (count < 20) {
         let count2 = 0;
-        for (let i = 1; i < j; i++) {
-            if (j % i === 0) {
+        for (let i = 1; i < number; i++) {
+            if (number % i === 0) {
                 count2++
             }
         }
         if (count2 === 1) {
-            document.write(j + ",");
+            document.write(number + ",");
             count++;
         }
-        j++;
+        number++;
     }
 
 </script>
