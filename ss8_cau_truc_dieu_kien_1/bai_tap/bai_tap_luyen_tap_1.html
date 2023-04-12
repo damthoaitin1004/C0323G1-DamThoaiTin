@@ -9,19 +9,20 @@
 <label> <input type="number" id="number" placeholder="nhập số a"></label>
 <label> <input type="number" id="number2" placeholder="nhập số b"></label><br><br>
 <button onclick="ketQua()">Check</button>
-<div id="result" >Đợi kết quả ở đây</div>
+<div id="result">Đợi kết quả ở đây</div>
 <script>
-    function ketQua(){
+    function ketQua() {
         let numberA = +document.getElementById("number").value;
         let numberB = +document.getElementById("number2").value;
-        if (numberB == 0){document.getElementById("result").innerHTML="b phai là một số khác 0"}
-        else if (numberA % numberB==0){
-            document.getElementById("result").innerHTML=numberA + " chia hết cho "+ numberB;
+        if (numberB == 0) {
+            document.getElementById("result").innerHTML = "b phai là một số khác 0";
+        } else if (numberA % numberB == 0) {
+            document.getElementById("result").innerHTML = numberA + " chia hết cho " + numberB;
 
 
-
+        } else {
+            document.getElementById("result").innerHTML = numberA + " không chia hết cho " + numberB;
         }
-        else {document.getElementById("result").innerHTML=numberA + " không chia hết cho " + numberB;}
 
 
     }

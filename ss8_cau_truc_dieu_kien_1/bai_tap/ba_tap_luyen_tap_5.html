@@ -6,22 +6,28 @@
 </head>
 <body>
 <h2>Xếp loại học lực học sinh dựa trên thang điểm của các bài kiểm tra</h2>
-<label><input  id="diemkiemtra" type="number"  placeholder="Nhập điểm bài kiểm tra"></label>
+<label><input id="diemkiemtra" type="number" placeholder="Nhập điểm bài kiểm tra"></label>
 <label><input type="number" id="diemgiuaki" placeholder="Nhập điểm thi giữa kì"></label>
-<label><input type="number"  id="diemcuoiki" placeholder="Nhập điểm thi cuối kì"></label><br><br>
+<label><input type="number" id="diemcuoiki" placeholder="Nhập điểm thi cuối kì"></label><br><br>
 <button onclick="tinhDiem()">Xếp loại</button>
 <div id="result">Kết quả sẽ hiện thị ở dây</div>
 <script>
-    function tinhDiem(){
+    function tinhDiem() {
         let diemKiemtra = +document.getElementById("diemkiemtra").value;
         let diemGiuaki = +document.getElementById("diemgiuaki").value;
         let diemCuoiki = +document.getElementById("diemcuoiki").value;
-        let diemTrungbinh = (diemKiemtra + diemGiuaki * 2 + diemCuoiki * 3)/6
-        if (diemTrungbinh > 10){document.getElementById("result").innerHTML = "Chỉ xếp loại trên thang điểm 1 đến 10"}
-        else if (diemTrungbinh > 8){document.getElementById("result").innerHTML="Xếp loại Giỏi";}
-        else if (diemTrungbinh >= 6){document.getElementById("result").innerHTML="Xếp loại học sinh Khá ";}
- else if (diemTrungbinh >= 4){document.getElementById("result").innerHTML="Xếp loại học sinh Trung bình"}
- else {document.getElementById("result").innerHTML="Học giỏi quá khuyên bạn nên đi phục vụ quân đội"}
+        let diemTrungbinh = (diemKiemtra + diemGiuaki * 2 + diemCuoiki * 3) / 6
+        if (diemTrungbinh > 10) {
+            document.getElementById("result").innerHTML = "Chỉ xếp loại trên thang điểm 1 đến 10"
+        } else if (diemTrungbinh > 8) {
+            document.getElementById("result").innerHTML = "Xếp loại Giỏi";
+        } else if (diemTrungbinh >= 6) {
+            document.getElementById("result").innerHTML = "Xếp loại học sinh Khá ";
+        } else if (diemTrungbinh >= 4) {
+            document.getElementById("result").innerHTML = "Xếp loại học sinh Trung bình"
+        } else {
+            document.getElementById("result").innerHTML = "Học giỏi quá khuyên bạn nên đi phục vụ quân đội"
+        }
 
     }
 </script>
