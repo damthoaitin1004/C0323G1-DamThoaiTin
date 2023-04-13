@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME DOAN SO</title>
+</head>
+<body>
+<BUTTON onclick="doGame()">Starts</BUTTON>
+<script>
+    function doGame() {
+        let gioiHan = +prompt("Nhập giới hạn đoán, số đoán sẽ nằm trong khoảng giới hạn bạn nhập vào");
+        let ramdom = Math.floor(Math.random() * gioiHan);
+        let soLan = 0;
+        while (soLan < 5) {
+            let soDoan = +prompt("Nhập số bạn đoán");
+            if (soDoan > ramdom) {
+                alert("SỐ đoán là số nhỏ hơn xin mời đoán lại");
+            } else if (soDoan < ramdom) {
+                alert("Số đoán là số lớn hơn xin mời đoán lại");
+            } else {
+                alert("Bạn đã đoán đúng");
+                break;
+            }
+            soLan++;
+        }
+        alert("Bạn đã hết cơ hội");
+
+
+    }
+
+
+</script>
+</body>
+</html>
