@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TU DIEN ANH VIET</title>
+</head>
+<body>
+<script>
+
+    let vietNam = ["táo", "chuối", "cam"];
+    let usa = ["apple", "banana", "orange"];
+    for (let i = 0; i < usa.length; i++) {
+        let dich = window.prompt("Nhập nhập từ tiếng anh cần dịch").toString();
+        if (dich === usa[i]) {
+            alert(vietNam[i]);
+            break;
+
+        } else {
+            alert("Đang được cập nhật, hẹn bản cập nhật sau");
+        }
+    }
+</script>
+</body>
+</html>

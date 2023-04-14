@@ -5,16 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
-
 <script>
     let array = [0, 10, 25, 36, 30, 90, 100, 156];
+    let max = array[0];
     for (let i = 0; i <= array.length; i++) {
-        if (array[i] >= 10) {
-            console.log(array[i]);
+        if (array[i] > max) {
+            max = array[i];
         }
     }
-
+    console.log(max);
+    console.log(array.indexOf(max));
 
 </script>
 </body>
