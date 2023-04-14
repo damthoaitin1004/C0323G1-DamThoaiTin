@@ -14,8 +14,7 @@
     let soThem = +prompt("Nhập số bất kì kiểm tra nó có thuộc mảng vừa nhập không")
     for (let j = 0; j <= array.length; j++) {
         if (soThem === array[j]) {
-            array.splice(array[j]);
-            array.push(soThem);
+            array.splice(j,1,soThem);
             break;
         } else if (array[j] !== soThem) {
             alert(array[j] + "is not in the array");
