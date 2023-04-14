@@ -12,14 +12,12 @@
         array.push(giaTri);
     }
     let soThem = +prompt("Nhập số bất kì kiểm tra nó có thuộc mảng vừa nhập không")
-    for (let j = 0; j <= array.length;j++) {
-        if (soThem === array[j]){
+    for (let j = 0; j <= array.length; j++) {
+        if (soThem === array[j]) {
             array.splice(array[j]);
             array.push(soThem);
             break;
-        }
-        else
-        {
+        } else {
             alert(array[j] + "is not in the array");
             break;
         }
