@@ -11,17 +11,18 @@
         let giaTri = +prompt("Nhập giá trị của mảng");
         array.push(giaTri);
     }
-    let soThem = +prompt("Nhập số bất kì kiểm tra nó có thuộc mảng vừa nhập không")
-    for (let j = 0; j <= array.length; j++) {
+    let soThem = +prompt("Nhập số bất kì kiểm tra nó có thuộc mảng vừa nhập không");
+    let j = 0;
+    for (j = 0; j <= array.length; j++) {
         if (soThem === array[j]) {
-            array.splice(j,1,soThem);
-            break;
-        } else if (array[j] !== soThem) {
-            alert(array[j] + "is not in the array");
+            array.splice(j, 1, soThem);
             break;
         }
-
     }
+    if (j === array.length) {
+        alert(soThem + "is not the array");
+    }
+
 
 </script>
 </body>
