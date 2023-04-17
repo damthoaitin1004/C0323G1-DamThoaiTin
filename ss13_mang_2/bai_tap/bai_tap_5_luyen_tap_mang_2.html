@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stringA = prompt("Vui lòng nhập Mảng A");
+    let stringB = prompt("Vui lòng nhập Mảng B");
+    let arrayA = stringA.split(' ');
+    let arrayB = stringB.split(' ');
+    let count = 0;
+    for (let i in arrayA) {
+        if ((arrayA[i] === arrayB[i]) && (arrayA.length === arrayB.length)) {
+            count++;
+        } else {
+            document.write("Hai chuỗi không giống nhau" + "<br>")
+        }
+    }
+
+
+    if (count === arrayA.length) {
+        document.write("Đây là 2 chuỗi giống nhau")
+    }
+    document.write("arrayA" + "=" + "[" + arrayA + "]" + "<br>")
+    document.write("arrayB" + "=" + "[" + arrayB + "]" + "<br>")
+</script>
+</body>
+</html>

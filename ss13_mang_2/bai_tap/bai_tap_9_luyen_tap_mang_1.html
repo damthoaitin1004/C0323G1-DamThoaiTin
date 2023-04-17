@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    let dem = 0;
+    while (dem < 20) {
+        let value = +prompt("10 phần tử đầu nhập sẽ là mảng A và 10 phần tử nhập sau sẽ là mảng B");
+        if ((value % 1 === 0) && (dem < 10)) {
+            arrayA.push(value);
+            dem++;
+        }
+        if ((value % 1 === 0) && (dem >= 10)) {
+            arrayB.push(value);
+            dem++;
+        }
+        if (value % 1 !== 0) {
+            alert(value + "Không phải là số nguyên vui lòng nhập lại");
+        }
+
+    }
+    document.write("arrayA" + "=" + "[" + arrayA + "]" + "<br>");
+    document.write("arrayB" + "=" + "[" + arrayB + "]" + "<br>");
+    let arrayC = arrayA.concat(arrayB);
+    document.write("arrayC" + "=" + "[" + arrayC + "]");
+
+
+</script>
+</body>
+</html>
