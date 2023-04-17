@@ -6,12 +6,17 @@
 </head>
 <body>
 <script>
-    let array = [0, -10, 25, -36, 30, -90, 100, -156];
-    for (let i = 0; i < array.length; i++) {
+    let string = prompt("Nhập chuỗi");
+    let array = string.split(' ');
+    let cuont = 0;
+    for (let i in array) {
         if ((array[i] % 1 === 0) && (array[i] < 0)) {
-            document.write(array[i] + ",");
+            cuont++
         }
-    }
+    }document.write(string);
+    document.write("<br>");
+    document.write("Có "+cuont+" sô nguyên âm trong chuỗi");
+
 
 </script>
 </body>

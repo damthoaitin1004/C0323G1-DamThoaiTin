@@ -8,13 +8,19 @@
 
 
 <script>
-    let array = [0, 10, 25, 36, 30, 90, 100, 156];
-    for (let i = 0; i <= array.length; i++) {
-        if (array[i] >= 10) {
-            console.log(array[i]);
-        }
+    let array = [];
+    let i = 0;
+    while(i < 10){
+        let number = +prompt("Vui lòng nhập độ dài của mảng ");
+        if (number % 1 === 0) {
+            array.push(number);
+            i++;
+        }else {number= +prompt("Bạn nhập sai rôi vui lòng nhập lại 1 số nguyên")}
     }
-
+    let cuont = 0;
+    for (let j in array){if (array[j] >= 10){cuont++}}
+    document.write("array = "+"["+array+"]"+"<br>");
+    document.write("Trong mảng có "+cuont+"số nguyên lớn hơn hoặc bằng 10");
 
 </script>
 </body>

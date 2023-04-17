@@ -6,17 +6,21 @@
 </head>
 <body>
 <script>
-    let array = [0, 10, 25, 36, 30, 90, 100, 156];
+    let array = [2, 10, 25, 36, 30, 90, 100, 156];
     let max = array[0];
-    let sum = 0;
-    for (let i = 0; i <= array.length; i++) {
+    let sum = array[0];
+    for (let i = 1; i < array.length; i++) {
         if (array[i] > max) {
             max = array[i];
-            sum = +array[i];
         }
+        sum = sum + array[i];
     }
-    console.log(max);
-    console.log(sum / array.length);
+    document.write("Số lớn nhất" + max);
+    document.write("<br>");
+    document.write(sum / array.length);
+
+
+
 </script>
 </body>
 </html>

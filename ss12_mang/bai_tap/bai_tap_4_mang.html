@@ -6,11 +6,16 @@
 </head>
 <body>
 <script>
-    let nhapSo = +prompt("Bạn muốn hiện thị bao nhiêu giá trị trong mảng");
+    let leght = +prompt("Vui lòng nhập độ dài của mảng");
     let array = [];
-    for (let i = 0; i <= (nhapSo - 1); i++) {
-        let x = +prompt("Nhập giá trị của mảng");
-        array.push(x);
+    let i = 0;
+     while (i < leght) {
+        let x = +prompt("Nhập giá trị số nguyên cho mảng của mảng");
+        if (x % 1===0){
+            array.push(x);
+            i++;
+        }else { x = +prompt("Đây không phải số nguyên xin mời nhập lại");}
+
     }
     alert(array.reverse());
 
