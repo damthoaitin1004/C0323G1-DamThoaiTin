@@ -6,16 +6,15 @@
 </head>
 <body>
 <script>
-        for (let j = 2; j < 10000; j++) {
-            if (isPrime(j)) {
-                alert(j +"là số nguyên tố");
-            }
+    for (let j = 2; j < 10000; j++) {
+        if (isPrime(j)) {
+            alert(j + "là số nguyên tố");
+        }
     }
-
 
     function isPrime(number) {
         let count = 0;
-        for (let i = 2; i < 10000; i++) {
+        for (let i = 2; i <= number; i++) {
             if (number % i === 0) {
                 count++;
             }
