@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arrayB = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let star = prompt("Nhập ngôi sao cần tìm");
+    checkStar(star);
+
+    function checkStar(name) {
+        let count = 0;
+        while (count < arrayA.length) {
+            if (name === arrayA[count]) {
+                alert("Ngôi sao " + arrayA[count] + " thuộc chòm sao " + arrayB[count]);
+                break;
+            }
+            count++;
+        }
+
+        if (count === arrayA.length) {
+            alert("Ngôi sao bạn nhập không tìm thấy");
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
