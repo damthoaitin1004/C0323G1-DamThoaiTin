@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    let r = +prompt("Nhập bán kính hình tròn");
+    let banKinh = +prompt("Nhập bán kính hình tròn");
     const pi = 3.14;
-    alert("Chu vi của hình tròn là " + tinhChuVi(r));
-    alert("Diện tích của hình tròn là " + tinhDienTich(r));
+    alert("Chu vi của hình tròn là " + tinhChuVi(banKinh));
+    alert("Diện tích của hình tròn là " + tinhDienTich(banKinh));
 
     function tinhChuVi(r) {
-        let chuVi = (r * 2) / pi;
-        return chuVi;
+        let p = (r * 2) / pi;
+        return p;
     }
 
     function tinhDienTich(r) {
-        let dienTich = r * r * pi;
-        return dienTich;
+        let s = r * r * pi;
+        return s;
     }
 </script>
 </body>
