@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [3, 5, 6, 8, 9, 4];
+    reverse(array);
+
+    function reverse(arr) {
+        for (let i = 0; i < (arr.length) / 2; i++) {
+            let tmp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = tmp;
+        }
+        alert(arr);
+    }
+
+
+</script>
+</body>
+</html>

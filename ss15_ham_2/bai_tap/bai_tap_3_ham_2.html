@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TINH GIAI THUA CUA MOT SO</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhập số bạn muốn tính giai thừa");
+    alert( number+"! = "+checkNumber(number));
+    function checkNumber(number) {
+        let n = 1;
+        for (let i = 1; i <= number; i++) {
+            n = n * i;
+        }
+        return n;
+    }
+</script>
+</body>
+</html>

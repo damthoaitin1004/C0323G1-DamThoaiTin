@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    while (true){
+    let enterNumber = prompt("Vui lòng nhập số kiểm tra có phải số nguyên dương không");
+    if (checkNumber(enterNumber)){
+        alert(inTeGer(enterNumber));
+        break;}
+    else {number = prompt("Đây không phải là một số vui lòng nhập lại");}}
+
+    function checkNumber(number) {
+        if (isNaN(number) === false) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function inTeGer(number){
+        if (((number % 1)===0)&&(number > 0)){return true;}
+        else {return false;}
+    }
+</script>
+</body>
+</html>

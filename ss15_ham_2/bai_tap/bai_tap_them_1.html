@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let doDai = +prompt("Nhập độ dài mảng");
+    for (let i = 0; i < doDai; i++) {
+        let enternumber = +prompt("Vui lòng nhập phần tử cho mảng");
+        array.push(enternumber);
+    }
+    alert(array);
+    alert(checkNumber(array));
+    function checkNumber(arr) {
+        let dem = 0;
+        for (let j = 1; j < arr.length; j++) {
+            if (arr[j] % (j) === 0) {
+                dem++
+            } else {
+                return false;
+            }
+        }
+        if (dem === arr.length-1) {
+           return true;
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ['a', '5', 'b', '6', 'c', 'a','b','a'];
+    let enter = prompt("Nhập kí tự ");
+    for (let i = 0; ; i++)
+        if (enter.length === 1) {
+            alert(checkNumber(enter));
+            break;
+        } else {
+            enter = prompt("Chỉ nhập một kí tự xin mời nhập lại");
+        }
+
+
+    function checkNumber(a) {
+        soLanGap = 0;
+        for (let i = 0; i <= arr.length; i++) {
+            if (a === arr[i]) {
+                soLanGap++;
+            }
+        }
+        if (soLanGap === 0) {
+            return -1;
+        } else {
+            return soLanGap;
+        }
+    }
+</script>
+</body>
+</html>

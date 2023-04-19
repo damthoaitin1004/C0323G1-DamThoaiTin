@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XEM KÍ TỰ NHẬP VÀO CÓ PHẢI LÀ SỐ KHÔNG</title>
+</head>
+<body>
+<script>
+    let inputValue = prompt("Nhập 1 kí t vào xem đó có phải là dữ liệu số không");
+    for (let i = 0; ; i++) {
+        if (inputValue.length === 1) {
+            alert(checkNumber(inputValue));
+            break;
+        } else {
+            inputValue = prompt("Đây không phải là 1 kí tự nhập lại");
+        }
+    }
+
+    function checkNumber(value) {
+        if (isNaN(value) === false) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
