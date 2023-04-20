@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập chiều cao hình chữ nhật<input type="number" id="height"></label>
+<label>Nhập chiều rộng hình chữ nhật<input type="number" id="width"></label>
+<br>
+<button onclick="chuVi()">ChuVi</button>
+<div id="result"></div>
+<br>
+<button onclick="dienTich()">Diện tích</button>
+<div id="result2"></div>
+<br>
+<button type="button" onclick="veHinh()">Vẽ Hình</button>
+<canvas id="canvas" width="500px" height="500px"></canvas>
+
+
+<script>
+
+    function chuVi() {
+        let h = +document.getElementById("height").value;
+        let w = +document.getElementById("width").value;
+        let hinhChuNhat = new Rectangle(h, w);
+        document.getElementById("result").innerHTML = hinhChuNhat.tinhChuVi();
+    }
+
+    function dienTich() {
+        let h = +document.getElementById("height").value;
+        let w = +document.getElementById("width").value;
+        let hinhChuNhat = new Rectangle(h, w);
+        document.getElementById("result2").innerHTML = hinhChuNhat.tinhDienTich();
+    }
+
+
+    class Rectangle {
+        constructor(h, w) {
+            this.height = h;
+            this.width = w;
+        }
+
+        tinhChuVi() {
+            return (this.height + this.width) * 2;
+        }
+
+        tinhDienTich() {
+            return this.height * this.width;
+        }
+
+        drawPicture() {
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#fa4b2a';
+            ctx.fillRect(10, 40, this.width, this.height);
+        }
+
+    }
+
+    function veHinh() {
+        let h = +document.getElementById("height").value;
+        let w = +document.getElementById("width").value;
+        let hinhChuNhat = new Rectangle(h, w);
+        document.getElementById("canvas").innerHTML = hinhChuNhat.drawPicture();
+    }
+
+</script>
+</body>
+</html>

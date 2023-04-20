@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class Temperature {
+        constructor(c) {
+            this.celsius = c;
+        }
+
+        fahrenheit() {
+            return 9 / 5 * this.celsius + 32;
+        }
+
+        kelvins() {
+            return this.celsius + 273
+        }
+    }
+
+    let c = +prompt("Nhập nhiệt độ");
+    let temperature = new Temperature(c);
+    alert("Nhiệt độ K: " +  temperature.fahrenheit() + "    "
+        + "Nhiệt độ F: " + temperature.kelvins())
+
+
+</script>
+</body>
+</html>
