@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(n) {
+            this.number = n;
+        }
+
+        getNumber() {
+            return this.number;
+        }
+
+        setNumber(number) {
+            this.number = number;
+        }
+
+        isEMpty() {
+            if (this.number <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEMpty()) {
+                alert("Táo đã hết rồi");
+            } else {
+                this.number--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(n, g, w) {
+            this.name = n;
+            this.gender = g;
+            this.weigh = w;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName() {
+            this.name = name;
+        }
+
+        getGender() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+
+        }
+
+        getWeight() {
+            return this.weigh;
+        }
+
+        setWeight(weight) {
+            this.weigh = weight;
+        }
+
+        isMale() {
+            if (this.gender === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        checkApple(apple) {
+            return apple.isEMpty();
+        }
+
+        eat(apple) {
+            if (apple.getNumber() > 0) {
+                apple.decrease();
+                this.weigh++;
+            } else {
+                alert("Táo đã hết rồi");
+            }
+        }
+        sayHelloadam(){document.write("Chào anh ");}
+        sayHelloeva(){document.write("Chào em ");}
+        sayEat(){document.write("Anh ăn táo không");}
+        say(string) {
+            console.log(string)
+        }
+    }
+
+
+    let appleRed = new Apple(10);
+    let adam = new Human("adam", 1, 60);
+    let eva = new Human("eva", 2, 70);
+
+
+    adam.say("I am Adam" + "<br>");
+    eva.say("I am Eva" + "<br>");
+    eva.sayHelloadam();
+    document.write("<br>")
+    adam.sayHelloeva();
+    document.write("<br>")
+    eva.sayEat();
+    document.write("<br>")
+    while (appleRed.isEMpty() !== true) {
+        document.write("Adam ăn táo" + "<br>");
+        adam.eat(appleRed);
+        document.write("Quả táo còn: " + "<br>");
+        document.write(appleRed.getNumber() + " đơn vị" + "<br>");
+        document.write("Cân nặng của Adm là: " + adam.getWeight() + " đơn vị" + "<br>");
+        document.write("<br>")
+        document.write("Eva ăn táo" + "<br>");
+        eva.eat(appleRed);
+        document.write("Quả táo còn: " + "<br>");
+        document.write(appleRed.getNumber() + " đơn vị" + "<br>");
+        document.write("Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+    }
+</script>
+</body>
+</html>
