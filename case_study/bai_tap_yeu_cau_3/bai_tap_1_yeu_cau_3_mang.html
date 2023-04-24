@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let array = [];
+    let lenght = +prompt("Nhập độ dài mảng");
+    for (let i = 0; i < lenght;i++){
+        let enter = +prompt("Nhập số cho mảng");
+        array.push(enter);
+    }
+    let sum = 0;
+    for (let i = 0; i < array.length;i++ ){
+        sum = sum + array[i];
+        arr.push(sum);
+    }
+    alert(arr);
+</script>
+</body>
+</html>

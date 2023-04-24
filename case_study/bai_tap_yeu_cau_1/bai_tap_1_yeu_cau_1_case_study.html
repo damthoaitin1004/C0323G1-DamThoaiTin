@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = +prompt("Nhập số lương ");
+    if (luong >= 15000000) {
+        alert("Tiền thuế bạn phải đóng là " + ((luong / 100) * 20)+"VNĐ");
+        alert("Thu nhập sau khi trừ thuế là " +(luong - ((luong / 100) * 20))+"VNĐ");
+    }else if (luong >= 7000000){
+        alert("Tiền thuế bạn phải đóng là " + ((luong / 100) * 10)+"VNĐ");
+        alert("Thu nhập sau khi trừ thuế là " +(luong - ((luong / 100) * 10))+"VNĐ");
+    }else {
+        alert("Tiền thuế bạn phải đóng là " + ((luong / 100) * 5)+"VNĐ");
+        alert("Thu nhập sau khi trừ thuế là " +(luong - ((luong / 100) * 5))+"VNĐ");
+    }
+
+</script>
+</body>
+</html>

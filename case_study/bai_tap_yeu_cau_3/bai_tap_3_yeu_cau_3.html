@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNumberator =[];
+    let arrDenominators = [];
+    let lenght = +prompt("nhập độ dài mảng");
+    for (let i =1; i <= lenght;i++ ){
+        let numerators = +prompt("Nhập tử số cho phân số thứ "+i);
+        arrNumberator.push(numerators);
+        let denominators = +prompt("Nhập mẫu số cho phân số thứ "+i);
+        arrDenominators.push(denominators);
+    }
+
+    let phanSoLonNhat = checkArr(arrNumberator,arrDenominators);
+    for (let e = 0; e<arrNumberator.length;e++){
+        if (arrNumberator[e] / arrDenominators[e] === phanSoLonNhat){
+            alert(arrNumberator[e]+"/"+arrDenominators[e]+" là phân số lớn nhất "+ "có chỉ số là "+e);
+        }
+    }
+
+    function checkArr(arrA,arrB){
+        let max = (arrA[0] / arrB[0]);
+    for (let j = 0 ; j < arrA.length;j++){
+        if (arrA[j] / arrB[j] >= max ){
+            max = arrA[j] / arrB[j];
+        }
+    } return max ;
+    }
+
+</script>
+</body>
+</html>
