@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let enterM = +prompt("Nhập m");
+let arrrM = [];
+let enterN = +prompt("Nhập n");
+let sum = 0;
+for (let i = 0; i < enterM;i++){
+    arrrM[i] = [];
+  for (let j = 0; j < enterN;j++){
+      arrrM[i][j] = +prompt("nhap phan tu");
+      if (arrrM[i][j] % 2===0){ sum = sum + arrrM[i][j]}
+  }
+}
+console.log(arrrM);
+console.log(sum);
+</script>
+</body>
+</html>

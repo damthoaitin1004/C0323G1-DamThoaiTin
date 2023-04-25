@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhap chuoi");
+    let arr = string.split(" ");
+    alert(checkArr(arr) + " là xâu kí tự dài nhất trong chuỗi vừa nhập");
+    let array = [];
+    for (let i = 0; i < arr.length; i++) {
+        array.push(upCase(arr[i]));
+    }
+    let result = array.join(" ");
+    alert(result);
+
+    function upCase(string) {
+        let arr = [];
+        for (let i = 0; i < string.length; i++) {
+            if (i === 0) {
+                let a = string[i].toUpperCase();
+                arr.push(a);
+            } else {
+                let b = string[i].toLowerCase();
+                arr.push(b);
+            }
+        }
+        return arr.join("");
+    }
+
+    function checkArr(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].length > max.length) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+</script>
+</body>
+</html>

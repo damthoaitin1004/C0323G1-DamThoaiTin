@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stringA = "aabcc";
+    let arrA = stringA.split('');
+    let stringB = "adcaa";
+    let arrB = stringB.split('');
+    let arrC = [];
+
+    for (let i = 0; i < arrA.length; i++) {
+        for (let j = 0; j < arrB.length; j++) {
+            if (arrA[i] === arrB[j]) {
+                arrB.splice(j, 1);
+
+                arrC.push(arrA[i]);
+                break;
+            }
+        }
+
+    }
+    alert(arrC.length);
+    alert(arrC);
+</script>
+</body>
+</html>

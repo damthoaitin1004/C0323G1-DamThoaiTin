@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [[1, 2, 3, 4], [6, 7, 8, 9, 10], [10, 11, 12]];
+    let arrMax = [];
+    let arrMin = [];
+    for (let i = 0; i < arr.length; i++) {
+        arrMax.push(sapXepMax(arr[i]));
+        arrMin.push(sapXepMin(arr[i]));
+    }
+    alert(sapXepMax(arrMax) + "là giá trị lớn nhất");
+    alert(sapXepMin(arrMin) + "là giá trị nhỏ nhất");
+
+    function sapXepMax(arr) {
+        arr.sort(function (a, b) {
+            return a - b;
+        });
+        return arr[(arr.length) - 1];
+    }
+
+    function sapXepMin(arr) {
+        arr.sort(function (a, b) {
+            return b - a;
+        });
+        return arr[(arr.length) - 1];
+    }
+</script>
+</body>
+</html>
