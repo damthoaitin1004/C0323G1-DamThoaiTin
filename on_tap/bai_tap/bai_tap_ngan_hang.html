@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+    <button onclick="napTien()">Nạp tiền</button>
+    <button onclick="rutTien()">Rút tiền</button>
+    <button onclick="add()">Tạo tài khoản</button>
+</label>
+<div id="result"></div>
+
+<script>
+    class NganHang {
+        constructor(soTaiKhoan, tenTaiKhoan, soTienTrongTaiKhoan) {
+            this.id = soTaiKhoan;
+            this.nameId = tenTaiKhoan;
+            this.money = soTienTrongTaiKhoan;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(soTaiKhoan) {
+            this.id = soTaiKhoan;
+        }
+
+        getNameId() {
+            return this.nameId;
+        }
+
+        setNameId(nameId) {
+            this.nameId = nameId
+        }
+
+        getMoney() {
+            return this.money;
+        }
+
+        setMoney(soTienTrongTaiKhoan) {
+            this.money = soTienTrongTaiKhoan;
+        }
+
+        inputMoney(tienNap) {
+            this.money += tienNap;
+        }
+
+        withdrawMoney(tienRut) {
+            if ((this.getMoney() > 0)&&(tienRut < this.getMoney()))
+            {
+                this.money = this.money - tienRut;
+            }else {alert("Đã nghèo còn đi rút tiền");}
+        }
+
+
+    }
+
+    let array = [];
+    let peopleA = new NganHang("C0323G1", "Nguyễn Văm A", 15000000);
+    let peopleB = new NganHang("C0423G2", "Nguyễn Văm B", 20000000);
+    let peopleC = new NganHang("C0523G3", "Nguyễn Văm C", 27000000);
+    array.push(peopleA, peopleB, peopleC);
+
+
+    function display() {
+
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <td>STT</td>\n' +
+            '        <td>Số tài khoản</td>\n' +
+            '        <td>Tên tài khoản</td>\n' +
+            '        <td>Số dư tài khoản</td>\n' +
+            '    </tr>\n' +
+            '    <tr>';
+        for (let i = 0; i < array.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + array[i].getId() + '</td>\n' +
+                '        <td>' + array[i].getNameId() + '</td>\n' +
+                '        <td>' + array[i].getMoney() + '</td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>\n';
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+    display();
+
+
+    function napTien() {
+        let soTaiKhoan = prompt("Vui lòng nhập số tài khoản cần nạp");
+        let flag = false;
+        for (let i = 0; i < array.length; i++) {
+            if (soTaiKhoan === array[i].getId()) {
+                flag = true;
+                let soTienNap = +prompt("Vui lòng nhập số tiền cần nạp vào");
+                array[i].inputMoney(soTienNap);
+            }
+        }
+        if (!flag) {
+            alert("Số tài khoản không tồn tại");
+        }
+        display();
+    }
+
+    function rutTien() {
+        let id = prompt("Vui lòng nhập số tài khoản vần rút");
+        let flag = false;
+        for (let i = 0; i < array.length; i++) {
+            if (id === array[i].getId()) {
+                flag = true;
+                let tienRut = +prompt("Nhập số tiền cần rút");
+                array[i].withdrawMoney(tienRut);
+            }
+        }
+        if (!flag) {
+            alert("Số tài khoản không tồn tại");
+        }display();
+    }
+    function add(){
+        let id = prompt("Vui lòng tạo số id");
+        let name = prompt("Vui lòng tạo tên tài khoản");
+        let money = +prompt("Nạp số dư vào tài khoản ");
+        let peopleC = new NganHang(id,name,money);
+        array.push(peopleC);
+        display();
+    }
+</script>
+</body>
+</html>

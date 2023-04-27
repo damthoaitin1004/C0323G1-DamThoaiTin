@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="add()">Thêm mới học viên</button>
+<button onclick="edit()">Sửa thông tin học viên</button>
+<button onclick="del()">Xóa học viên</button>
+<p id="result"></p>
+
+<script>
+    class Human {
+        constructor(id, name, studenClass, email, born,module) {
+            this.id = id;
+            this.name = name;
+            this.number = studenClass;
+            this.email = email;
+            this.born = born;
+            this.module = module;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getClss() {
+            return this.number;
+        }
+
+        setClss(studenClass) {
+            this.number = studenClass;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getBorn() {
+            return this.born;
+        }
+
+        setBorn(born) {
+            this.born = born;
+        }
+        getModule(){
+            return this.module;
+        }
+        setModule(module){
+            this.module = module;
+        }
+
+    }
+
+    let arrSt = [];
+
+    let nguyenVanA = new Human("001", "Nguyễn Văn A", "C0323G1", "nguyenvana@gmail.com", "01/02/2014");
+    console.log(nguyenVanA);
+    arrSt.push(nguyenVanA);
+    let nguyenVanB = new Human("002", "Nguyễn Văn B", "C0323G1", "nguyenvanb@gmail.com", "02/02/2014");
+    arrSt.push(nguyenVanB);
+    let nguyenVanC = new Human("003", "Nguyễn Văn C", "C0323G1", "nguyenvanc@gmail.com", "03/03/2014");
+    arrSt.push(nguyenVanC);
+
+    function display() {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' + '<th>Mã học viên</th>\n' +
+            '<th>Tên</th>\n' +
+            '<th>Lớp</th>\n' +
+            '<th>Email</th>\n' +
+            '<th>Ngày sinh</th>\n' +
+            '</tr>\n';
+        for (let i = 0; i < arrSt.length; i++) {
+            tableString += '<tr>\n' +
+                '<td>' + arrSt[i].getId() + '</td>\n' +
+                '<td>' + arrSt[i].getName() + '</td>\n' +
+                '<td>' + arrSt[i].getClss() + '</td>\n' +
+                '<td>' + arrSt[i].getEmail() + '</td>\n' +
+                '<td>' + arrSt[i].getBorn() + '</td>\n' +
+                '</tr>'
+        }
+        tableString += '</table>';
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+    display();
+
+    function add() {
+        let name = prompt("Vui lòng nhập tên học sinh");
+        let id = prompt("Vui lòng nhập id");
+        let clss = prompt("Vui lòng nhập lớp");
+        let email = prompt("Vui lòng nhập email");
+        let born = prompt("Vui lòng nhập ngày tháng năm sinh");
+        let newSt = new Human(id, name, clss, email, born);
+        arrSt.push(newSt);
+        display();
+    }
+
+    function del() {
+        let enterId = prompt("Vui lòng nhập mã học viên bạn cần xóa");
+        let del = confirm("Bạn có muốn xóa học viên này không ");
+        let flag = false;
+        if (del) {
+            for (let i = 0; i < arrSt.length; i++) {
+                if (enterId === arrSt[i].getId()) {
+                    arrSt.splice(i,1);
+                    flag = true;
+                    break;
+                }
+            }if (!flag){alert("Không có HV này")}
+        }else {alert("Đã hủy");}
+        display();
+    }
+
+
+    function edit(){
+    let enter = prompt("Nhập mã học viên bạn cần xóa");
+    for (let i =0; i < arrSt.length;i++){
+        if (enter === arrSt[i].getId()){
+            let nameNew = prompt("Nhập lại tên học viên");
+            let clssNew = prompt("Nhập lại lớp");
+            let emailMew = prompt("Nhập lại email");
+            let bornNew = prompt("Nhập lại ngày tháng năm sinh");
+            arrSt[i].setName(nameNew);
+            arrSt[i].setClss(clssNew);
+            arrSt[i].setEmail(emailMew);
+            arrSt[i].setBorn(bornNew);
+            break;
+        }
+    }  display();
+    }
+
+</script>
+</body>
+</html>

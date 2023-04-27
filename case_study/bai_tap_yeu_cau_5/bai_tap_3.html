@@ -6,29 +6,18 @@
 </head>
 <body>
 <script>
-    let arr = [[1, 2, 3, 4], [6, 7, 8, 9, 10], [10, 11, 12]];
-    let arrMax = [];
-    let arrMin = [];
+    let arr = [[1, 2, 5, 4], [6, 7, 8, 23, 10], [10, 11, 12]];
+    let max = arr[0][0];
+    let min = arr[0][0];
     for (let i = 0; i < arr.length; i++) {
-        arrMax.push(sapXepMax(arr[i]));
-        arrMin.push(sapXepMin(arr[i]));
+        for (let j = 0; j < arr[i].length;j++){
+            if (arr[i][j] > max){max=arr[i][j];}
+            if (arr[i][j]< min) {min=arr[i][j];}
+        }
     }
-    alert(sapXepMax(arrMax) + "là giá trị lớn nhất");
-    alert(sapXepMin(arrMin) + "là giá trị nhỏ nhất");
+    alert("giá trị lớn nhất có trong mảng là "+max);
+    alert("giá trị nhỏ nhất có trong mảng là "+min);
 
-    function sapXepMax(arr) {
-        arr.sort(function (a, b) {
-            return a - b;
-        });
-        return arr[(arr.length) - 1];
-    }
-
-    function sapXepMin(arr) {
-        arr.sort(function (a, b) {
-            return b - a;
-        });
-        return arr[(arr.length) - 1];
-    }
 </script>
 </body>
 </html>
