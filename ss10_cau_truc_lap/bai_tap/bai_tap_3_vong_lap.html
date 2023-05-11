@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    document.write("0<br/>1<br/>");
-    let nOne = 0;
-    let nTwo = 1;
-    let fibonacci;
-    for (let count = 0; count < 20; count++) {
-        fibonacci = nOne + nTwo;
-        nOne = nTwo;
-        nTwo = fibonacci;
-        document.write(fibonacci + "<br/>");
+    // document.write("0<br/>1<br/>");
+
+   let numberOne= 0;
+   let numberTwo=1;
+    let fibonasi = 0;
+    for (let i = 1; i <= 200;i++){
+        document.write(fibonasi);
+        document.write("<br>");
+        fibonasi = numberOne+numberTwo;
+        numberOne = numberTwo;
+        numberTwo = fibonasi
     }
 
 </script>

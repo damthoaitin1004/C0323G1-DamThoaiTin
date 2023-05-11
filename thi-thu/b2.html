@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo = +prompt("nhap so n ");
+    alert(kiemTraSoNguyenTo(nhapSo));
+    alert("Tong cua cac so nguyen to cho den " + nhapSo + " la " + tongCacSoNguyenTo(nhapSo));
+
+    function kiemTraSoNguyenTo(number) {
+        let flag = false;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = true;
+                return false;
+            }
+        }
+        if (!flag) {
+            return true;
+        }
+    }
+
+    function tongCacSoNguyenTo(number) {
+        let tong = 0;
+        for (let i = 2; i <= number; i++) {
+            if (kiemTraSoNguyenTo(i)) {
+                tong = i + tong;
+            }
+        }
+        return tong;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="number" value="Nhap chieu dai" id="chieuDai"> Chieu dai hinh chu nhat</label>
+<label><input type="number" value="Nhap chieu rong" id="chieuRong"> Chieu rong hinh chu nhat</label>
+<label><input type="color" value="Nhap mau cho hinh chu nhat " id="mau"> Mau cho hinh chu nhat</label>
+<button onclick="tinhChuViHinhChuNhat()">Tinh chu vi hinh chu nhat</button>
+<button onclick="tinhDienTichHinhChuNhat()">Tinh dien tich hinh chu nhat</button>
+<br>
+<div id="result"></div>
+<br>
+<br>
+<label><input type="number" value="Nhap canh hinh vuong" id="canhHinhVuong">Nhap canh hinh vuong</label>
+<label><input type="color" value="Nhap mau cho hinh chu nhat " id="mauHinhVuong"> Mau cho hinh vuong</label>
+<button onclick="tinhChuViHinhVuong()">Tinh chu vi hinh vuong</button>
+<button onclick="tinhDienTichHinhVuong()">Tinh dien tich hinh vuong</button>
+<br>
+<div id="result2"></div>
+<label><input type="number" value="Nhap ban hinh hinh tron " id="banKinh">Nhap ban kinh hinh tron </label>
+<button onclick="tinhChuViHinhTron()">Tinh chu vi hinh tron</button>
+<button onclick="tinhDienTichHinhTron()">Tinh dien tich hinh tron</button>
+<div id="result3"></div>
+<script>
+    class Rectangle {
+        constructor(height, wight, color) {
+            this.height = height;
+            this.wight = wight;
+            this.color = color;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+
+        getWight() {
+            return this.wight;
+        }
+
+        setWight(wight) {
+            this.wight = wight;
+        }
+
+        getColor() {
+            return this.color;
+        }
+
+        setColor(color) {
+            this.color = color;
+        }
+
+        chuVi() {
+            return (this.wight + this.height) * 2;
+        }
+
+        dienTich() {
+            return (this.height * this.wight);
+        }
+    }
+
+    class HinhTron {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getColor() {
+            return this.color;
+        }
+
+        setRadius(radius) {
+            this.radius = radius;
+        }
+
+        setColor(color) {
+            this.color = color;
+        }
+    }
+
+    function tinhChuViHinhChuNhat() {
+        let h = +document.getElementById("chieuDai").value;
+        let w = +document.getElementById("chieuRong").value;
+        let color = document.getElementById("mau");
+        let hinhChuNhat = new Rectangle(h, w, color);
+        document.getElementById("result").innerHTML = hinhChuNhat.chuVi();
+    }
+
+    function tinhDienTichHinhChuNhat() {
+        let h = +document.getElementById("chieuDai").value;
+        let w = +document.getElementById("chieuRong").value;
+        let color = document.getElementById("mau");
+        let hinhChuNhat = new Rectangle(h, w, color);
+        document.getElementById("result").innerHTML = hinhChuNhat.dienTich();
+    }
+
+    function tinhChuViHinhVuong() {
+        let r = +document.getElementById("canhHinhVuong").value;
+        let color = document.getElementById("mauHinhVuong").value;
+        let hinhVuong = new Rectangle(r, r, color);
+        document.getElementById("result2").innerHTML = hinhVuong.chuVi();
+    }
+
+    function tinhDienTichHinhVuong() {
+        let r = +document.getElementById("canhHinhVuong").value;
+        let color = document.getElementById("mauHinhVuong").value;
+        let hinhVuong = new Rectangle(r, r, color);
+        document.getElementById("result2").innerHTML = hinhVuong.dienTich();
+    }
+    function tinhDienTichHinhTron(){
+        let r = +document.getElementById("banKinh").value;
+        let hinhTronA = new HinhTron(r,)
+    }
+</script>
+</body>
+</html>

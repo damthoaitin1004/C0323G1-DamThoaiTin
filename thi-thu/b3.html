@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let doDaiMang = +prompt("Nhap do dai mang ");
+    for (let i = 0; i < doDaiMang; i++) {
+        let nhapSo = +prompt("Nhap so cho mang ");
+        mang.push(nhapSo);
+    }
+    alert(mang);
+    let viTriThem = +prompt("Nhap vi tri index ban muon them vao ");
+    let soThemVao = +prompt("Nhap so them vao ");
+    let mangNoi = [];
+    for (let i = 0; i < doDaiMang; i++) {
+        if (i >= viTriThem) {
+            mangNoi.push(mang[i]);
+            mang.splice(i,1);
+            mang.push(soThemVao);
+        }
+    }
+    alert(mang.concat(mangNoi));
+
+</script>
+</body>
+</html>

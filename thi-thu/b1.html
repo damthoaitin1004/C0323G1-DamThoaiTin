@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangSoNguyen = [];
+    for (let i = 0; i < 4; i++) {
+        let nhapSo = +prompt("Nhap so");
+        mangSoNguyen.push(nhapSo);
+    }
+    alert("So trung binh cua cac so trong mang la " + tinhTrungBinh(mangSoNguyen));
+
+    function tinhTrungBinh(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum = arr[i] + sum;
+        }
+        return sum / arr.length;
+    }
+</script>
+</body>
+</html>

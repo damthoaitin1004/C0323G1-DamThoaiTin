@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="themMoi()">Thêm mới máy tính</button>
+<button onclick="sapXep()">Sắp xếp theo giá</button>
+<div id="result"></div>
+
+<script>
+    class Computer {
+        constructor(id, ten, hang, gia) {
+            this.id = id;
+            this.ten = ten;
+            this.hang = hang;
+            this.gia = gia;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        SetId(id) {
+            this.id = id;
+        }
+
+        SetTen(ten) {
+            this.ten = ten;
+        }
+
+        SetHang(hang) {
+            this.hang = hang;
+        }
+
+        SetGia(gia) {
+            this.hang = gia;
+        }
+    }
+
+    let mangMaytinh = [];
+    let maytinhA = new Computer("C001", "Acerpro", "Acer", 20900000);
+    mangMaytinh.push(maytinhA);
+
+    function hienthi() {
+        let stringTable = '<table border="2" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã sản phẩm</th>\n' +
+            '        <th>Tên máy</th>\n' +
+            '        <th>Tên nhà sản xuất</th>\n' +
+            '        <th>Giá bán</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < mangMaytinh.length; i++) {
+            stringTable += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + mangMaytinh[i].getId() + '</td>\n' +
+                '        <td>' + mangMaytinh[i].getTen() + '</td>\n' +
+                '        <td>' + mangMaytinh[i].getHang() + '</td>\n' +
+                '        <td>' + mangMaytinh[i].getGia() + '</td>\n' +
+                '    </tr>';
+        }
+        stringTable += '</table>';
+        document.getElementById("result").innerHTML = stringTable;
+    }
+
+    hienthi();
+
+    function themMoi() {
+        let nhapId = prompt("Nhap ma cho may tinh");
+        let nhapTen = prompt("Nhap tên cho máy tính");
+        let nhapHang = prompt("Nhập hãng sản xuất");
+        let gia = +prompt("Nhập giá sản phẩm ");
+        let maytinhB = new Computer(nhapId, nhapTen, nhapHang, gia);
+        mangMaytinh.push(maytinhB);
+        hienthi();
+    }
+
+    function sapXep() {
+        mangMaytinh.sort(function (a, b,) {
+            return a.getGia() - b.getGia();
+        });
+        hienthi();
+    }
+</script>
+</body>
+</html>

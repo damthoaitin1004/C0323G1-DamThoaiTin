@@ -6,14 +6,34 @@
 </head>
 <body>
 <script>
-    let tuSo = prompt("Nhập tử số");
-    if (checkdata(tuSo)===true){checkTuSo}
-    let mauSo = prompt("Nhập mẫu số");
 
-    function checkData(a){
-        if (isNaN(a)===false){return true;}
-        else {return false;}
+    let nhapPhanSo = prompt("Nhap phan so ");
+    let arr = nhapPhanSo.split("/");
+    if ((checkData(arr[0], arr[1]))) {
+        alert(arr[0] / uCLN(arr[0], arr[1]) + "/" + arr[1] / uCLN(arr[0], arr[1]) + " là phân số tối giãn của " + arr[0] + "/" + arr[1]);
+    } else {
+        alert("Đây không phải là phân số");
     }
+
+    //Ham xet dk co phai la phan so va so nguyen hay khong
+    function checkData(a, b) {
+        if ((isNaN(a, b) === false) && (a, b % 1 === 0) && (b !== 0)) {
+            return true;
+        }
+        return false;
+    }
+
+    ///Ham tinh Uoc so chung lon nhat
+    function uCLN(a, b) {
+        let max = 0;
+        for (let i = 0; i <= a; i++) {
+            if ((a % i === 0) && (b % i === 0)) {
+                max = i;
+            }
+        }
+        return max;
+    }
+
 </script>
 
 </body>

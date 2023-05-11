@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let mangFibonasi = [];
+    let doDai = +prompt("Nhập độ dài cho mảng");
+    for (let i = 0; i < doDai; i++) {
+        let nhapSo = +prompt("Nhập số cho mảng");
+        mang.push(nhapSo);
+    }
+    for (let i = 0; i < mang.length; i++) {
+        if (kiemTraSoFibonasi(mang[i])) {
+            mangFibonasi.push(mang[i]);
+        }
+    }
+    if (mangFibonasi.length > 1) {
+        alert("Các số fibonasi có trong mảng là "+mangFibonasi.sort(function (a, b) {
+                    return a - b;
+                }
+            )
+        );
+    }else {alert("Không có số fibonasi nào trong mảng");}
+
+    function kiemTraSoFibonasi(number) {
+        let fibonasi = 0;
+        let numberA = 0;
+        let numberB = 1;
+        let flag = false;
+        for (let i = 0; i <= number; i++) {
+            if (number === fibonasi) {
+                flag = true;
+                return true;
+            }
+            fibonasi = numberA + numberB;
+            numberA = numberB;
+            numberB = fibonasi;
+
+        }
+        if (!flag) {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

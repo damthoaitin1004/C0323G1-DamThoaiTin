@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapChuoi = prompt("Nhập chuỗi");
+    let mang = nhapChuoi.split(" ");
+    if (mang.length === 1) {
+        alert("Chuỗi chỉ có 1 từ nên không cần viết tắt")
+    }else {
+        vietHoaChuCaiDauChoCHuoi(mang);
+    }
+    function vietHoaChuCaiDauChoCHuoi(arr){
+       let mangVietTat =[];
+        for (let i =0; i<arr.length;i++){
+            mangVietTat.push(arr[i][0]);
+        }
+        let chuoiVietTatInHoa = mangVietTat.join("");
+        alert(chuoiVietTatInHoa.toUpperCase());
+    }
+
+
+</script>
+</body>
+</html>
